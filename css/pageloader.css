@@ -70,3 +70,67 @@ html file
 			font-family: 'Roboto', 'Helvetica', sans-serif;
 			font-weight: bold;
         }
+.page-loader {
+    position: fixed;
+    z-index: 999999999999;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+}
+.page-loader svg {
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.page-loader svg #v {
+    transform: rotateX(360deg);
+    transform-origin: 11%;
+    animation: spin 4s infinite;
+}
+.page-loader svg #e {
+    transform: rotateX(360deg);
+    transform-origin: 22%;
+    animation: spin 4s 0.25s infinite;
+}
+.page-loader svg #n {
+    transform: rotateX(360deg);
+    transform-origin: 33%;
+    animation: spin 4s 0.5s infinite;
+}
+.page-loader svg #t {
+    transform: rotateX(360deg);
+    transform-origin: 44%;
+    animation: spin 4s 0.75s infinite;
+}
+.page-loader svg #u {
+    transform: rotateX(360deg);
+    transform-origin: 58%;
+    animation: spin 4s 1s infinite;
+}
+.page-loader svg #r {
+    transform: rotateX(360deg);
+    transform-origin: 68%;
+    animation: spin 4s 1.25s infinite;
+}
+.page-loader svg #e2 {
+    transform: rotateX(360deg);
+    transform-origin: 80%;
+    animation: spin 4s 1.5s infinite;
+}
+.page-loader svg #s {
+    transform: rotateX(360deg);
+    transform-origin: 91%;
+    animation: spin 4s 1.75s infinite;
+}
+@keyframes spin {
+    from {
+        transform: rotateY(360deg)
+    }
+    50%,to {
+        transform: rotateY(0deg)
+    }
+}

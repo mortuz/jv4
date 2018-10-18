@@ -284,6 +284,117 @@ $(document).on('ready', function () {
 		$('.section').addClass('anim');
 	});
 
+	//fetch case studides
+	var caseCarousel;
+	var currentId = 2;
+	var fetchCaseStudies = function (id) {
+		$.ajax({
+			url: "http://jventures.pk/backend/wp-json/wp/v2/posts?_embed",
+			data: { categories: id },
+			type: "get",
+			success: function (data) {
+				// console.log(data);
+				var animateClass = "";
+
+				if (id == 2) {
+					if (currentId == 2)
+						animateClass = 'animate';
+					else
+						animateClass = 'animated fadeInRight';
+				} else {
+					animateClass = 'animated fadeInRight';
+				}
+
+				var html = '';
+				var links = [];
+				for (let i = 0; i < data.length; i++) {
+					const item = data[i];
+					links = item.content.rendered.match(/href="([^"]*")/g);
+					if (links != null) {
+						// links = $(links).replace("href=", "");
+
+						if (links && links.length) {
+							links = links[0].replace("href=", "");
+							links.split('"').join('');
+							// console.log(links)
+						}
+					} else {
+						links = '#';
+					}
+
+
+					currentId = id;
+					var title = item.title.rendered;
+					var content = $(item.content.rendered)
+						.empty("a")
+						.text()
+						.substr(0, 120);
+
+					// console.log(content)
+					var image = item._embedded['wp:featuredmedia'][0].source_url;
+
+					console.log(links);
+					html += `
+						<div class="item ${animateClass}">
+							<div class="card">
+								<img class="card-img-top" src="${image}" alt="Card image cap">
+								<div class="card-body">
+									<h6 class="card-title text-uppercase small-text">${title}</h6>
+									<p class="card-text small-text"><small>${content}</small></p>
+									<a href=${links} target="_blank" class="btn btn-rounded btn-outline-primary"><small>Download</small></a>
+								</div>
+							</div>
+						</div>
+					`;
+				}
+
+				$('.js-case-studies').html(html);
+
+				// if(id !=2) {
+				$(".js-case-studies").trigger("destroy.owl.carousel");
+				// return;
+				// }
+
+				caseCarousel = $(".js-case-studies");
+				caseCarousel.owlCarousel({
+					autoplay: true,
+					loop: false,
+					margin: 20,
+					nav: true,
+					navContainerClass: "owl-nav case-more-nav",
+					responsiveClass: true,
+					responsive: {
+						0: {
+							items: 1
+						},
+						768: {
+							items: 2
+						},
+						1000: {
+							items: 3
+						}
+					}
+				});
+			},
+			error: function (err) {
+				console.error('FETCH_CASE_STUDIES_ERR:', err);
+			}
+		})
+	}
+
+	fetchCaseStudies(2);
+
+	// change case studies
+
+	$(".js-case-studies-tab").on('click', 'a', function (e) {
+		e.preventDefault();
+		$('.js-case-studies-tab').find('.active').removeClass('active');
+		$(this).addClass('active');
+		var id = $(this).attr('data-id');
+		// currentId = id;
+		fetchCaseStudies(id);
+		// caseCarousel.destroy();
+	});
 
 });
 

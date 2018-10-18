@@ -4638,3 +4638,13 @@ h1, h2, h3, h4 {
 #fp-nav > ul > li:nth-child(3) {
   display: none;
 }
+.no-bullet li{
+  list-style: none !important;
+}
+.case-carousel .card {
+  background-color: transparent;
+  border-color: transparent;
+}
+.nav-link.active{
+    color: #ffffff;
+}
