@@ -396,5 +396,31 @@ $(document).on('ready', function () {
 		// caseCarousel.destroy();
 	});
 
+	// partners carousel initialize
+	$('.js-partners').owlCarousel({
+		autoplay: true,
+		loop: true,
+		margin: 10,
+		responsiveClass: true,
+		responsive: {
+			0: {
+				items: 2,
+			},
+			320: {
+				items: 2
+			},
+			480: {
+				items: 2
+			},
+			552: {
+				items: 4
+			},
+			768: {
+				items: 5,
+				margin: 20
+			},
+		}
+	});
+
 });
 
