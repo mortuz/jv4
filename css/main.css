@@ -4648,3 +4648,64 @@ h1, h2, h3, h4 {
 .nav-link.active{
     color: #ffffff;
 }
+
+/* PRODUCTS SECTION */ 
+video {
+    max-width: 100%;
+}
+
+.products {
+    padding-top: 7rem; 
+    padding-bottom: 7rem; 
+}
+
+.products video{
+    max-height: 400px;
+}
+.products .nav-tabs{
+    border: none;
+}
+.products .nav-tabs .nav-link.active {
+    border-color: transparent;
+    color: #ffffff;
+    background-color: transparent;
+    /* color: #fff; */
+}
+.products .nav-tabs a {
+    color: #696969;
+    border: 1px solid #f8204b;
+    border-radius: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    /* box-shadow: 0 2px 5px 0 hsla(0,0%,85%,.6); */
+    font-size: 14px;
+    /* background-color: #fff; */
+    margin-top: 15px;
+    border-color: transparent;
+    color: #f8204b;
+}
+.products .nav-tabs a:hover {
+  border-color: transparent;
+}
+.products .nav-pills .nav-link {
+    color: #f8204b;
+    border: 1px solid #f8204b;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-top: 15px;
+}
+.products .nav-pills .nav-link.active {
+    background-color: #f8204b;
+    border: 1px solid #f8204b;
+    color: #ffffff;
+}
+.products .img-thumbnail {
+    height: 250px;
+}
+.products .img-thumbnail.img-portrait {
+    height: 400px;
+}

@@ -248,7 +248,7 @@ $(document).on('ready', function () {
 		}
 	});
 	// Scroll to fullPage.js next/previous section
-	$('.scrolldown a, .scroll.down').on('click', function () {
+	$('.scrolldown > a, .scroll.down').on('click', function () {
 		try {
 			// fullpage scroll
 			$.fn.fullpage.moveSectionDown();
