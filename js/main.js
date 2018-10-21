@@ -410,7 +410,7 @@ $(document).on('ready', function () {
 				items: 2
 			},
 			480: {
-				items: 2
+				items: 3
 			},
 			552: {
 				items: 4
