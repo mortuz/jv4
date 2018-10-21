@@ -459,5 +459,6 @@ $(document).on('ready', function () {
 		}  
 	}, 50);
 
+	$(".js-video-button").modalVideo();
 });
 

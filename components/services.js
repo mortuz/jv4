@@ -85,7 +85,10 @@ document.write(`
                                 Inmobi allows you to put your banners to the right target audience in
                                 some of the biggest apps on the planet
                             </p>
-                            <video src="./img/inmobi/video.mp4" controls class="img-thumbnail d-block mx-auto"></video>
+                            <a href="#" class="js-video-button" data-video-id='V178n_jtoT4'>
+                                <img src="http://placehold.it/400" alt="vcl">
+                            </a>
+
                         </div>
 
                         <div class="tab-pane fade" id="v-pills-inmobi-rich-media" role="tabpanel" aria-labelledby="v-pills-inmobi-rich-media">
@@ -473,7 +476,9 @@ document.write(`
                                                         </ul>
                                                     </div>
                                                     <div class="col-md-6 text-center">
-                                                        <video src="./img/snapchat/webview.mp4" controls pause></video>
+                                                    <a href="#" class="js-video-button" data-video-id="xqWgTK1GR5Y">
+                                                        <img src="http://placehold.it/400">
+                                                    </a>
                                                     </div>
                                                 </div>
 
@@ -498,7 +503,9 @@ document.write(`
                                                         </ul>
                                                     </div>
                                                     <div class="col-md-6 text-center">
-                                                        <video src="./img/snapchat/appinstalls.mp4" controls pause></video>
+                                                        <a href="#" class="js-video-button" data-video-id="f7722DYFa3s">
+                                                            <img src="http://placehold.it/400">
+                                                        </a>
                                                     </div>
                                                 </div>
 
@@ -524,7 +531,9 @@ document.write(`
                                                         </ul>
                                                     </div>
                                                     <div class="col-md-6 text-center">
-                                                        <video src="./img/snapchat/longform.mp4" controls></video>
+                                                        <a href="#" class="js-video-button" data-video-id="VbuInzgD3WA">
+                                                            <img src="http://placehold.it/400">
+                                                        </a>
                                                     </div>
                                                 </div>
 
