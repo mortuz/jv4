@@ -4772,3 +4772,12 @@ video {
     min-height: 45px;
     color: #9E9E9E;
 }
+
+
+.agency-img {
+  border-radius: 50%;
+}
+
+.logo-circle {
+  border-radius: 75%;
+}
