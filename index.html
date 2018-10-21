@@ -831,8 +831,8 @@
 
                 <!-- Action button -->
                 <div class="btns-action anim-4">
-                  <a class="btn btn-outline-white btn-round" href="#contact/message">
-                    <span class="txt">Advertiser</span>
+                  <a class="btn btn-outline-white btn-round" href="#contact/publisher">
+                    <span class="txt">Contact us</span>
                   </a>
                 </div>
               </div>
@@ -848,7 +848,7 @@
       <!-- end of information slide -->
 
       <!-- begin of message slide -->
-      <div class="slide" id="message" data-anchor="message">
+      <div class="slide" id="advertiser" data-anchor="advertiser">
         <!-- Begin of slide section wrapper -->
         <div class="section-wrapper">
           <div class="row justify-content-between">
@@ -866,9 +866,12 @@
 
                 <!-- Action button -->
                 <div class="btns-action">
-                  <!-- <a class="btn btn-outline-white btn-round" href="#contact/information">
+                  <a class="btn btn-outline-white btn-round" href="#contact/information">
                     <span class="txt">Information</span>
-                  </a> -->
+                  </a>
+                  <a class="btn btn-outline-white btn-round" href="#contact/publisher">
+                    <span class="txt">I'm a publisher</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -887,6 +890,9 @@
                         <input id="mes-name" name="name" type="text" placeholder="" class="form-control-line form-success-clean"
                           required>
                       </div>
+
+                      <input type="hidden" name="type" value="Advertiser">
+
                       <div class="form-group email">
                         <label for="mes-email">Email :</label>
                         <input id="mes-email" type="email" placeholder="" name="email" class="form-control-line form-success-clean"
@@ -903,6 +909,85 @@
                         </div>
                       </div>
 
+                      <div class="btns">
+                        <button id="submit-message" class="btn btn-normal btn-white btn-round btn-full email_b" name="submit_message">
+                          <span class="txt">Send</span>
+                          <span class="arrow-icon"></span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End of slide section wrapper -->
+      </div>
+      <!-- end of message slide -->
+
+      <!-- begin of publisher slide -->
+      <div class="slide" id="publisher" data-anchor="publisher">
+        <!-- Begin of slide section wrapper -->
+        <div class="section-wrapper">
+          <div class="row justify-content-between">
+            <div class="col-12 col-md-6 center-vh">
+              <!-- content -->
+              <div class="section-content anim text-left">
+                <!-- title and description -->
+                <div class="title-desc">
+                  <div>
+                    <h5>Publisher</h5>
+                    <h2 class="display-4 display-title">Email Us</h2>
+                    <p>For questions about our company and products.</p>
+                  </div>
+                </div>
+      
+                <!-- Action button -->
+                <div class="btns-action">
+                  <a class="btn btn-outline-white btn-round" href="#contact/information">
+                    <span class="txt">Information</span>
+                  </a>
+                  <a class="btn btn-outline-white btn-round" href="#contact/advertiser">
+                    <span class="txt">I'm an advertiser</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+      
+            <div class="col-12 col-md-6 col-lg-5">
+              <!-- content -->
+              <div class="section-content anim text-left">
+                <!-- title and description -->
+                <div class="">
+                  <div class="form-container form-container-card">
+                    <!-- Message form container -->
+                    <form class="send_message_form message form" method="post" action="http://demo.highhay.com/simpleux/ajaxserver/serverfile.php"
+                      id="message_form">
+                      <div class="form-group name">
+                        <label for="mes-name">Name :</label>
+                        <input id="mes-name" name="name" type="text" placeholder="" class="form-control-line form-success-clean"
+                          required>
+                      </div>
+
+                      <input type="hidden" name="type" value="Publisher">
+
+                      <div class="form-group email">
+                        <label for="mes-email">Email :</label>
+                        <input id="mes-email" type="email" placeholder="" name="email" class="form-control-line form-success-clean"
+                          required>
+                      </div>
+                      <div class="form-group no-border">
+                        <label for="mes-text">Message</label>
+                        <textarea id="mes-text" placeholder="..." name="message" class="form-control form-control-outline thick form-success-clean"
+                          required></textarea>
+      
+                        <div>
+                          <p class="message-ok invisible form-text-feedback form-success-visible">Your message has been
+                            sent, thank you.</p>
+                        </div>
+                      </div>
+      
                       <div class="btns">
                         <button id="submit-message" class="btn btn-normal btn-white btn-round btn-full email_b" name="submit_message">
                           <span class="txt">Send</span>
