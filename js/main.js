@@ -360,7 +360,7 @@ $(document).on('ready', function () {
 					autoplay: true,
 					loop: false,
 					margin: 20,
-					nav: true,
+					// nav: true,
 					navContainerClass: "owl-nav case-more-nav",
 					responsiveClass: true,
 					responsive: {
