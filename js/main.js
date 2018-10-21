@@ -422,5 +422,42 @@ $(document).on('ready', function () {
 		}
 	});
 
+	// HOME TYPED JS
+	if ($('.element').length) {
+		$('.element').each(function () {
+			$(this).typed({
+				strings: [
+					$(this).data("text1"),
+					$(this).data("text2"),
+					$(this).data("text3")
+				],
+				loop: $(this).data("loop")
+					? $(this).data("loop")
+					: false,
+				backDelay: $(this).data("backdelay")
+					? $(this).data("backdelay")
+					: 2000,
+				typeSpeed: 10
+			});
+		});
+	}
+
+	$(".image-container img:first").addClass("firstPic");
+	var picLeft = $(".firstPic").width();
+	var leftMove = 0;
+	var step = 1;
+	setInterval(function () {
+	  leftMove -= step;
+	  $(".firstPic").css('margin-left', leftMove); 
+	  if (leftMove <= picLeft * -1 - 5) { 
+		  $(".image-container img:first").remove(); 
+		  $(".image-container img:first").addClass('firstPic');
+		  leftMove = 0;
+		  $(".image-container").append('<img  src=\"https://cdn.ushareit.com/shareit/w/ofwb/static/headModule/background/background.jpg" alt="">');
+		//   setSize();
+		console.log(leftMove)
+		}  
+	}, 50);
+
 });
 
