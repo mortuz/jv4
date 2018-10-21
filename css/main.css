@@ -4738,6 +4738,8 @@ video {
   top: 0;
   left: 0;
   opacity: 0.1;
+  width: 500%;
+  height: 100%;
 }
 
 .image-container img {
