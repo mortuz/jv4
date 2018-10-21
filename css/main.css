@@ -4751,3 +4751,24 @@ video {
   font-size: 0;
   float: left;
 }
+
+
+.form-input .placeholder {
+    position: absolute;
+    display: block;
+    top: 23px;
+    z-index: 2;
+    font-size: 14px;
+    transition: all 200ms ease-in-out;
+    width: 100%;
+    cursor: text;
+    left: 20px;
+}
+
+.form-input label {
+    position: relative;
+    display: block;
+    width: 100%;
+    min-height: 45px;
+    color: #9E9E9E;
+}
