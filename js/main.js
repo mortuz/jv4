@@ -442,5 +442,22 @@ $(document).on('ready', function () {
 		});
 	}
 
+	$(".image-container img:first").addClass("firstPic");
+	var picLeft = $(".firstPic").width();
+	var leftMove = 0;
+	var step = 1;
+	setInterval(function () {
+	  leftMove -= step;
+	  $(".firstPic").css('margin-left', leftMove); 
+	  if (leftMove <= picLeft * -1 - 5) { 
+		  $(".image-container img:first").remove(); 
+		  $(".image-container img:first").addClass('firstPic');
+		  leftMove = 0;
+		  $(".image-container").append('<img  src=\"https://cdn.ushareit.com/shareit/w/ofwb/static/headModule/background/background.jpg" alt="">');
+		//   setSize();
+		console.log(leftMove)
+		}  
+	}, 50);
+
 });
 
