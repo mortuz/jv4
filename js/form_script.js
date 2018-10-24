@@ -10,7 +10,7 @@
 	$.fn.initForm = function (options) {
 		var settings = $.extend({
 			type: 'post',
-			serverUrl: '#',
+			serverUrl: './ajax/contact.php',
 			successClean: this.find('.form-success-clean'),
 			successGone: this.find('.form-success-gone'),
 			successInvisible: this.find('.form-success-invisible'),
@@ -42,6 +42,7 @@
 
 						/* CALLBACK FOR SENDING EMAIL GOEAS HERE */
 						success: function (data) {
+							console.log(data)
 							//Ajax connexion was a success, now handle response
 							if (data && !data.error) {
 								// Hide for if no error
@@ -67,7 +68,7 @@
 							settings.textFeedback.removeClass('gone');
 							settings.textFeedback.removeClass('invisible');
 							settings.textFeedback.html('Error when sending request.');
-							console.log('ajax error');
+							console.log('ajax error', jqXHR);
 
 						}
 						/* END EMAIL SENDING CALLBACK */

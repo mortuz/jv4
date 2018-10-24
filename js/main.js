@@ -205,7 +205,7 @@ $(document).on('ready', function () {
 					// init contact form
 					// Default server url
 					var newsletterServerUrl = './ajaxserver/serverfile.php';
-					var messageServerUrl = './ajaxserver/serverfile.php';
+					var messageServerUrl = './ajax/contact.php';
 
 					// Use form define action attribute
 					if (sendEmailForm.attr('action') && (sendEmailForm.attr('action')) != '') {
@@ -237,6 +237,11 @@ $(document).on('ready', function () {
 				afterLoad: function (anchorLink, index) {
 					// Behavior after a full page is loaded
 					// hide or show clock
+
+					if (index == 4 || index == 3) {
+						var nav = $(".navbar-sidebar ").find('li').eq(1);
+						nav.addClass('active');
+					}
 					if ($('.section.active').hasClass('hide-clock')) {
 						headerContainer.addClass('gone');
 					} else {
